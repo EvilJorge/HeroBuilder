@@ -1,0 +1,54 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.android.herobuilder.ClassFragment">
+
+    <!-- Level, Experience, Etc -->
+    <LinearLayout
+        android:id="@+id/level_info_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+            android:id="@+id/level_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/level_label"/>
+
+        <TextView
+            android:id="@+id/favored_class_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/favored_class_label"/>
+
+        <TextView
+            android:id="@+id/ability_bonus_list_header_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ability_bonus_list_header"/>
+
+    </LinearLayout>
+
+    <!-- Class Level List -->
+    <TextView
+        android:id="@+id/class_level_list_header_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/level_list_header"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/level_info_box"/>
+
+    <ListView
+        android:id="@+id/class_level_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/class_level_list_header_textview"
+        app:layout_constraintLeft_toLeftOf="@id/class_level_list_header_textview"/>
+
+</android.support.constraint.ConstraintLayout>
