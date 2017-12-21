@@ -98,7 +98,7 @@ public class RaceFragment extends Fragment implements AdapterView.OnItemSelected
         }
 
         if(mRacialTraitsListAdapter == null) {
-            mRacialTraitsListAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, traitsList);
+            mRacialTraitsListAdapter = new ArrayAdapter<String>(getContext(), R.layout.list_item_racial_trait, traitsList);
             mRacialTraitsListView.setAdapter(mRacialTraitsListAdapter);
         } else {
             mRacialTraitsListAdapter.clear();

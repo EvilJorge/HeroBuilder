@@ -10,6 +10,9 @@ public class PathfinderActivity extends AppCompatActivity {
     CharacterPagerAdapter mPFCharacterPagerAdapter;
     ViewPager mPFCharacterViewPager;
 
+    // Character Object
+    public PFCharacter mPFCharacter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

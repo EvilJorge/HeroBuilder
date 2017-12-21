@@ -19,30 +19,73 @@
 
     </style>
 
-    <!-- Label Styles -->
+    <!-- Tab Styles -->
 
-    <style name="standardLabelStyle">
-        <item name="android:padding">3dp</item>
-        <item name="android:textSize">15sp</item>
-        <item name="android:textColor">#000000</item>
+    <style name="TabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="tabMode">fixed</item>
+        <item name="tabIndicatorColor">@color/pfBrown</item>
+        <item name="tabPaddingStart">0dp</item>
+        <item name="tabPaddingEnd">0dp</item>
+        <item name="tabMaxWidth">0dp</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabBackground">@drawable/tab_selector_background</item>
+        <item name="tabSelectedTextColor">@color/tab_text_selected</item>
     </style>
 
-    <style name="sectionHeaderStyle">
-        <item name="android:textSize">15sp</item>
-        <item name="android:textColor">#000000</item>
+    <style name="TabLayoutStyle.TextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- Pathfinder Styles -->
+
+    <style name="PathFinder" parent="Theme.AppCompat.DayNight.DarkActionBar">
+    </style>
+
+    <style name="PathFinder.Standard">
+        <item name="android:background">@color/pfBeige</item>
+    </style>
+
+    <style name="PathFinder.Standard.Label">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="PathFinder.Standard.Header">
+        <item name="android:background">@color/pfBrown</item>
+        <item name="android:textColor">@color/pfBeige</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">3dp</item>
+    </style>
+
+    <style name="PathFinder.Standard.ListItem">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- Ability Score Styles -->
+    <style name="PathFinder.Standard.AbilityLabel">
+        <item name="android:textColor">@color/pfDarkGrey</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="PathFinder.Standard.AbilityAbbreviation">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <!-- Spinner styles -->
     <style name="spinnerItemStyle">
-        <item name="android:padding">2dp</item>
+        <item name="android:paddingStart">5dp</item>
         <item name="android:textSize">15sp</item>
-        <item name="android:textColor">#000000</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/spinner_background</item>
     </style>
 
     <style name="spinnerDropDownItemStyle">
         <item name="android:padding">2dp</item>
         <item name="android:textSize">15sp</item>
-        <item name="android:textColor">#000000</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
 </resources>

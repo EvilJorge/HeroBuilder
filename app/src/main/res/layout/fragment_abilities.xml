@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/PathFinder.Standard"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     tools:context="com.example.android.herobuilder.AbilitiesFragment">
@@ -12,12 +13,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/ability_scores_header"/>
+            android:text="@string/ability_scores_header"
+            style="@style/PathFinder.Standard.Header"/>
 
         <!-- Strength -->
         <android.support.constraint.ConstraintLayout
@@ -29,17 +34,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/strength_abbr_label"
+                style="@style/PathFinder.Standard.AbilityAbbreviation"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="@id/strength_label_textview"/>
+                app:layout_constraintLeft_toLeftOf="parent"/>
 
             <TextView
                 android:id="@+id/strength_label_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/strength_label"
+                style="@style/PathFinder.Standard.AbilityLabel"
                 app:layout_constraintTop_toBottomOf="@id/strength_abbr_textview"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                app:layout_constraintLeft_toLeftOf="@id/strength_abbr_textview"
+                app:layout_constraintRight_toRightOf="@id/strength_abbr_textview"/>
 
             <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
                 android:id="@+id/strength_value_textview"
@@ -49,17 +56,21 @@
                 app:snp_minValue="3"
                 app:snp_maxValue="20"
                 app:snp_value="10"
+                app:snp_value_text_size="30sp"
+                app:snp_value_text_color="#000000"
                 app:layout_constraintBottom_toBottomOf="@id/strength_label_textview"
-                app:layout_constraintLeft_toRightOf="@id/strength_label_textview"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintLeft_toRightOf="@id/strength_abbr_textview"
+                app:layout_constraintTop_toTopOf="@id/strength_abbr_textview" />
 
             <TextView
                 android:id="@+id/strength_bonus_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+4"
-                app:layout_constraintTop_toTopOf="@id/strength_value_textview"
-                app:layout_constraintLeft_toRightOf="@id/strength_value_textview"/>
+                app:layout_constraintTop_toTopOf="@id/strength_abbr_textview"
+                app:layout_constraintBottom_toBottomOf="@id/strength_label_textview"
+                app:layout_constraintLeft_toRightOf="@id/strength_value_textview"
+                app:layout_constraintRight_toRightOf="parent"/>
 
         </android.support.constraint.ConstraintLayout>
 
@@ -73,17 +84,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/dexterity_abbr_label"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="@id/dexterity_label_textview"/>
+                style="@style/PathFinder.Standard.AbilityAbbreviation"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
 
             <TextView
                 android:id="@+id/dexterity_label_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/dexterity_label"
+                style="@style/PathFinder.Standard.AbilityLabel"
                 app:layout_constraintTop_toBottomOf="@id/dexterity_abbr_textview"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                app:layout_constraintLeft_toLeftOf="@id/dexterity_abbr_textview"
+                app:layout_constraintRight_toRightOf="@id/dexterity_abbr_textview"/>
 
             <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
                 android:id="@+id/dexterity_value_textview"
@@ -93,17 +106,21 @@
                 app:snp_minValue="3"
                 app:snp_maxValue="20"
                 app:snp_value="10"
+                app:snp_value_text_size="30sp"
+                app:snp_value_text_color="#000000"
                 app:layout_constraintBottom_toBottomOf="@id/dexterity_label_textview"
-                app:layout_constraintLeft_toRightOf="@id/dexterity_label_textview"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintLeft_toRightOf="@id/dexterity_abbr_textview"
+                app:layout_constraintTop_toTopOf="@id/dexterity_abbr_textview" />
 
             <TextView
                 android:id="@+id/dexterity_bonus_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+4"
-                app:layout_constraintTop_toTopOf="@id/dexterity_value_textview"
-                app:layout_constraintLeft_toRightOf="@id/dexterity_value_textview"/>
+                app:layout_constraintTop_toTopOf="@id/dexterity_abbr_textview"
+                app:layout_constraintBottom_toBottomOf="@id/dexterity_label_textview"
+                app:layout_constraintLeft_toRightOf="@id/dexterity_value_textview"
+                app:layout_constraintRight_toRightOf="parent"/>
 
         </android.support.constraint.ConstraintLayout>
 
@@ -117,17 +134,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/constitution_abbr_label"
+                style="@style/PathFinder.Standard.AbilityAbbreviation"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="@id/constitution_label_textview"/>
+                app:layout_constraintLeft_toLeftOf="parent" />
 
             <TextView
                 android:id="@+id/constitution_label_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/constitution_label"
+                style="@style/PathFinder.Standard.AbilityLabel"
                 app:layout_constraintTop_toBottomOf="@id/constitution_abbr_textview"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                app:layout_constraintLeft_toLeftOf="@id/constitution_abbr_textview"
+                app:layout_constraintRight_toRightOf="@id/constitution_abbr_textview"/>
 
             <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
                 android:id="@+id/constitution_value_textview"
@@ -137,17 +156,21 @@
                 app:snp_minValue="3"
                 app:snp_maxValue="20"
                 app:snp_value="10"
+                app:snp_value_text_size="30sp"
+                app:snp_value_text_color="#000000"
                 app:layout_constraintBottom_toBottomOf="@id/constitution_label_textview"
-                app:layout_constraintLeft_toRightOf="@id/constitution_label_textview"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintLeft_toRightOf="@id/constitution_abbr_textview"
+                app:layout_constraintTop_toTopOf="@id/constitution_abbr_textview" />
 
             <TextView
                 android:id="@+id/constitution_bonus_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+4"
-                app:layout_constraintTop_toTopOf="@id/constitution_value_textview"
-                app:layout_constraintLeft_toRightOf="@id/constitution_value_textview"/>
+                app:layout_constraintTop_toTopOf="@id/constitution_abbr_textview"
+                app:layout_constraintBottom_toBottomOf="@id/constitution_label_textview"
+                app:layout_constraintLeft_toRightOf="@id/constitution_value_textview"
+                app:layout_constraintRight_toRightOf="parent"/>
 
         </android.support.constraint.ConstraintLayout>
 
@@ -161,17 +184,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/intelligence_abbr_label"
+                style="@style/PathFinder.Standard.AbilityAbbreviation"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="@id/intelligence_label_textview"/>
+                app:layout_constraintLeft_toLeftOf="parent"/>
 
             <TextView
                 android:id="@+id/intelligence_label_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/intelligence_label"
+                style="@style/PathFinder.Standard.AbilityLabel"
                 app:layout_constraintTop_toBottomOf="@id/intelligence_abbr_textview"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                app:layout_constraintLeft_toLeftOf="@id/intelligence_abbr_textview"
+                app:layout_constraintRight_toRightOf="@id/intelligence_abbr_textview"/>
 
             <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
                 android:id="@+id/intelligence_value_textview"
@@ -181,17 +206,21 @@
                 app:snp_minValue="3"
                 app:snp_maxValue="20"
                 app:snp_value="10"
+                app:snp_value_text_size="30sp"
+                app:snp_value_text_color="#000000"
                 app:layout_constraintBottom_toBottomOf="@id/intelligence_label_textview"
-                app:layout_constraintLeft_toRightOf="@id/intelligence_label_textview"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintLeft_toRightOf="@id/intelligence_abbr_textview"
+                app:layout_constraintTop_toTopOf="@id/intelligence_abbr_textview" />
 
             <TextView
                 android:id="@+id/intelligence_bonus_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+4"
-                app:layout_constraintTop_toTopOf="@id/intelligence_value_textview"
-                app:layout_constraintLeft_toRightOf="@id/intelligence_value_textview"/>
+                app:layout_constraintTop_toTopOf="@id/intelligence_abbr_textview"
+                app:layout_constraintBottom_toBottomOf="@id/intelligence_label_textview"
+                app:layout_constraintLeft_toRightOf="@id/intelligence_value_textview"
+                app:layout_constraintRight_toRightOf="parent"/>
 
         </android.support.constraint.ConstraintLayout>
 
@@ -205,17 +234,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/wisdom_abbr_label"
+                style="@style/PathFinder.Standard.AbilityAbbreviation"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="@id/wisdom_label_textview"/>
+                app:layout_constraintLeft_toLeftOf="parent"/>
 
             <TextView
                 android:id="@+id/wisdom_label_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/wisdom_label"
+                style="@style/PathFinder.Standard.AbilityLabel"
                 app:layout_constraintTop_toBottomOf="@id/wisdom_abbr_textview"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                app:layout_constraintLeft_toLeftOf="@id/wisdom_abbr_textview"
+                app:layout_constraintRight_toRightOf="@id/wisdom_abbr_textview"/>
 
             <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
                 android:id="@+id/wisdom_value_textview"
@@ -225,17 +256,21 @@
                 app:snp_minValue="3"
                 app:snp_maxValue="20"
                 app:snp_value="10"
+                app:snp_value_text_size="30sp"
+                app:snp_value_text_color="#000000"
                 app:layout_constraintBottom_toBottomOf="@id/wisdom_label_textview"
-                app:layout_constraintLeft_toRightOf="@id/wisdom_label_textview"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintLeft_toRightOf="@id/wisdom_abbr_textview"
+                app:layout_constraintTop_toTopOf="@id/wisdom_abbr_textview" />
 
             <TextView
                 android:id="@+id/wisdom_bonus_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+4"
-                app:layout_constraintTop_toTopOf="@id/wisdom_value_textview"
-                app:layout_constraintLeft_toRightOf="@id/wisdom_value_textview"/>
+                app:layout_constraintTop_toTopOf="@id/wisdom_abbr_textview"
+                app:layout_constraintBottom_toBottomOf="@id/wisdom_label_textview"
+                app:layout_constraintLeft_toRightOf="@id/wisdom_value_textview"
+                app:layout_constraintRight_toRightOf="parent"/>
 
         </android.support.constraint.ConstraintLayout>
 
@@ -249,17 +284,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/charisma_abbr_label"
+                style="@style/PathFinder.Standard.AbilityAbbreviation"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="@id/charisma_label_textview"/>
+                app:layout_constraintLeft_toLeftOf="parent"/>
 
             <TextView
                 android:id="@+id/charisma_label_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/charisma_label"
+                style="@style/PathFinder.Standard.AbilityLabel"
                 app:layout_constraintTop_toBottomOf="@id/charisma_abbr_textview"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                app:layout_constraintLeft_toLeftOf="@id/charisma_abbr_textview"
+                app:layout_constraintRight_toRightOf="@id/charisma_abbr_textview"/>
 
             <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
                 android:id="@+id/charisma_value_textview"
@@ -269,17 +306,21 @@
                 app:snp_minValue="3"
                 app:snp_maxValue="20"
                 app:snp_value="10"
+                app:snp_value_text_size="30sp"
+                app:snp_value_text_color="#000000"
                 app:layout_constraintBottom_toBottomOf="@id/charisma_label_textview"
-                app:layout_constraintLeft_toRightOf="@id/charisma_label_textview"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintLeft_toRightOf="@id/charisma_abbr_textview"
+                app:layout_constraintTop_toTopOf="@id/charisma_abbr_textview" />
 
             <TextView
                 android:id="@+id/charisma_bonus_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+4"
-                app:layout_constraintTop_toTopOf="@id/charisma_value_textview"
-                app:layout_constraintLeft_toRightOf="@id/charisma_value_textview"/>
+                app:layout_constraintTop_toTopOf="@id/charisma_abbr_textview"
+                app:layout_constraintBottom_toBottomOf="@id/charisma_label_textview"
+                app:layout_constraintLeft_toRightOf="@id/charisma_value_textview"
+                app:layout_constraintRight_toRightOf="parent"/>
 
         </android.support.constraint.ConstraintLayout>
     </LinearLayout>
@@ -289,33 +330,151 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_weight="1"
         android:orientation="vertical">
 
+        <!-- Attack Bonuses -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/attack_bonus_header"/>
+            android:text="@string/attack_bonus_header"
+            style="@style/PathFinder.Standard.Header"/>
 
         <TextView
+            android:id="@+id/attack_bonus_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/combat_maneuvers_header"/>
+            android:text="@string/attack_bonus_label"
+            style="@style/PathFinder.Standard.Label"/>
 
+        <TextView
+            android:id="@+id/melee_attack_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/melee_attack_label"
+            style="@style/PathFinder.Standard.Label"/>
+
+        <TextView
+            android:id="@+id/ranged_attack_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ranged_attack_label"
+            style="@style/PathFinder.Standard.Label"/>
+
+        <!-- Combat Maneuvers -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/armor_class_header"/>
+            android:text="@string/combat_maneuvers_header"
+            style="@style/PathFinder.Standard.Header"/>
 
+        <TextView
+            android:id="@+id/cmb_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cm_bonus_label"
+            style="@style/PathFinder.Standard.Label"/>
+
+        <TextView
+            android:id="@+id/cmd_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cm_defense_label"
+            style="@style/PathFinder.Standard.Label"/>
+
+        <!-- Armor Class -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/defenses_header"/>
+            android:text="@string/armor_class_header"
+            style="@style/PathFinder.Standard.Header"/>
 
+        <TextView
+            android:id="@+id/armor_class_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/armor_class_label"
+            style="@style/PathFinder.Standard.Label"/>
+
+        <TextView
+            android:id="@+id/touch_ac_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/touch_ac_label"
+            style="@style/PathFinder.Standard.Label"/>
+
+        <TextView
+            android:id="@+id/flatfooted_ac_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/flatfooted_ac_label"
+            style="@style/PathFinder.Standard.Label"/>
+
+        <!-- Defenses -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/miscellaneous_header"/>
+            android:text="@string/defenses_header"
+            style="@style/PathFinder.Standard.Header"/>
+
+        <TextView
+            android:id="@+id/fortitude_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fortitude_label"
+            style="@style/PathFinder.Standard.Label"/>
+
+        <TextView
+            android:id="@+id/reflex_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reflex_label"
+            style="@style/PathFinder.Standard.Label"/>
+
+        <TextView
+            android:id="@+id/willpower_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/willpower_label"
+            style="@style/PathFinder.Standard.Label"/>
+
+        <!-- Miscellaneous -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/miscellaneous_header"
+            style="@style/PathFinder.Standard.Header"/>
+
+        <TextView
+            android:id="@+id/initiative_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/initiative_label"
+            style="@style/PathFinder.Standard.Label"/>
+
+        <TextView
+            android:id="@+id/hit_point_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hit_points_label"
+            style="@style/PathFinder.Standard.Label"/>
+
+        <TextView
+            android:id="@+id/speed_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/speed_label"
+            style="@style/PathFinder.Standard.Label"/>
+
+        <TextView
+            android:id="@+id/encumbrance_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/encumbrance_label"
+            style="@style/PathFinder.Standard.Label"/>
 
     </LinearLayout>
 

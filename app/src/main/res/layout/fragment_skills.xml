@@ -4,12 +4,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/PathFinder.Standard"
     tools:context="com.example.android.herobuilder.SkillsFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/skills_tab_label" />
+        android:text="@string/skills_tab_label"
+        style="@style/PathFinder.Standard.Header"/>
 
     <ListView
         android:id="@+id/skills_listview"

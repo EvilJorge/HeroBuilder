@@ -29,11 +29,31 @@
 
     <!-- Abilities Tab Strings -->
     <string name="ability_scores_header">Ability Scores</string>
+
     <string name="attack_bonus_header">Attack Bonus</string>
+    <string name="attack_bonus_label">Attack Bonus: </string>
+    <string name="melee_attack_label">Melee Attack: </string>
+    <string name="ranged_attack_label">Ranged Attack: </string>
+
     <string name="combat_maneuvers_header">Combat Maneuvers</string>
+    <string name="cm_bonus_label">CMB: </string>
+    <string name="cm_defense_label">CMD: </string>
+
     <string name="defenses_header">Defenses</string>
+    <string name="fortitude_label">Fortitude Save: </string>
+    <string name="reflex_label">Reflex Save: </string>
+    <string name="willpower_label">Willpower Save: </string>
+
     <string name="armor_class_header">Armor Class</string>
+    <string name="armor_class_label">Armor Class: </string>
+    <string name="touch_ac_label">Touch: </string>
+    <string name="flatfooted_ac_label">Flat-Footed: </string>
+
     <string name="miscellaneous_header">Miscellaneous</string>
+    <string name="initiative_label">Initiative: </string>
+    <string name="hit_points_label">Hit Points: </string>
+    <string name="speed_label">Speed: </string>
+    <string name="encumbrance_label">Encumbrance: </string>
 
     <string name="strength_abbr_label">STR</string>
     <string name="strength_label">Strength</string>
